@@ -6,6 +6,11 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 
 
+// Servicios
+
+import { ElementsService } from './services/elements.services';
+
+
 // Componentes
 
 import { AppComponent } from './app.component';
@@ -29,7 +34,9 @@ import { DictionaryComponent } from './components/dictionary/dictionary.componen
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    ElementsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
