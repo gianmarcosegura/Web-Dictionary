@@ -8,9 +8,18 @@ import { ElementsService } from '../../services/elements.services';
 })
 export class DictionaryComponent implements OnInit {
 
-  constructor( private _servicioDictionary: ElementsService ) { }
+  botonText: string;
+  diccionario: any[] = [];
+
+  constructor( private _servicioDictionary: ElementsService ) {
+
+   }
 
   ngOnInit() {
+
+    this.diccionario = this._servicioDictionary.getElementos();
+    this.botonText = 'Info';
+
   }
 
 }

@@ -1,3 +1,7 @@
+.cabecera {
+    justify-content: space-between;
+}
+
 .card-img-top {
     background-color: cadetblue;
 }
@@ -5,4 +9,9 @@
 .card-image {
     width: 150px;
     padding: 1rem;
+}
+
+.elemento:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
