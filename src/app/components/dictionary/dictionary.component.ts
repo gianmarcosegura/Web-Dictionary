@@ -6,15 +6,18 @@ import { ElementsService } from '../../services/elements.services';
   templateUrl: './dictionary.component.html',
   styleUrls: ['./dictionary.component.css']
 })
+
 export class DictionaryComponent implements OnInit {
 
   diccionario: any[] = [];
   textoBuscar: string;
+  ejemplo: number;
 
   constructor( private _servicioDictionary: ElementsService ) {  }
 
   ngOnInit() {
 
+    this.ejemplo = 0;
     this.diccionario = this._servicioDictionary.getElementos();
 
   }
@@ -22,6 +25,13 @@ export class DictionaryComponent implements OnInit {
   imprime() {
 
     this.textoBuscar = event.target.value.toLowerCase();
+
+    !this.textoBuscar ? this.textoBuscar = null : console.log('');
+
+    setTimeout(() => {
+      this.ejemplo = document.getElementById('content').childElementCount;
+    }, 0);
+
   }
 
 }

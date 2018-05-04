@@ -1,11 +1,12 @@
 <div class="row cabecera">
   <h2>Tecnologías</h2>
   <form class="form-inline my-2 my-lg-0">
+    <p style="margin: 0; margin-top: 18px; margin-right: 1rem;"> Hemos encontrado {{ ejemplo }} resultados. </p>
     <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name='textoBuscar' (keyup)='imprime()' aria-label="Search" value>
   </form>
 </div>
 <hr />
-<div class="row">
+<div id='content' class="row">
   <ng-container *ngFor="let concepto of diccionario">
     <div *ngIf="concepto.titulo.toLowerCase().includes(textoBuscar)" class="col-sm-6 col-lg-4">
       <div class="card mb-4 elemento">

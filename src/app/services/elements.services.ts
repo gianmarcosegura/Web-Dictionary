@@ -10,42 +10,42 @@ export class ElementsService {
     private elementos: any[] =
     [
         {
-            titulo: 'HTML5',
+            titulo: 'HTML5 ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'CSS3',
+            titulo: 'CSS3 ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'Javascript',
+            titulo: 'Javascript ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'Bootstrap',
+            titulo: 'Bootstrap ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'jQuery',
+            titulo: 'jQuery ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'Angular',
+            titulo: 'Angular ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'React',
+            titulo: 'React ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'Vue',
+            titulo: 'Vue ',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         }
