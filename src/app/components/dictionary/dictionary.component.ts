@@ -24,7 +24,7 @@ export class DictionaryComponent implements OnInit {
 
   imprime() {
 
-    this.textoBuscar = event.target.value.toLowerCase();
+    this.textoBuscar = (event.target as HTMLInputElement).value.toLowerCase();
 
     !this.textoBuscar ? this.textoBuscar = null : console.log('');
 
