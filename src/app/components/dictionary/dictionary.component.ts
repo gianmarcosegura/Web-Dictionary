@@ -8,18 +8,20 @@ import { ElementsService } from '../../services/elements.services';
 })
 export class DictionaryComponent implements OnInit {
 
-  botonText: string;
   diccionario: any[] = [];
+  textoBuscar: string;
 
-  constructor( private _servicioDictionary: ElementsService ) {
-
-   }
+  constructor( private _servicioDictionary: ElementsService ) {  }
 
   ngOnInit() {
 
     this.diccionario = this._servicioDictionary.getElementos();
-    this.botonText = 'Info';
 
+  }
+
+  imprime() {
+
+    this.textoBuscar = event.target.value.toLowerCase();
   }
 
 }

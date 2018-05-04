@@ -1,14 +1,14 @@
 <div class="row cabecera">
   <h2>Tecnologías</h2>
   <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name='textoBuscar' (keyup)='imprime()' aria-label="Search" value>
   </form>
 </div>
 <hr />
 <div class="row">
   <ng-container *ngFor="let concepto of diccionario">
-    <div class="col-sm-6 col-lg-4">
-      <div class="card mb-3 elemento">
+    <div *ngIf="concepto.titulo.toLowerCase().includes(textoBuscar)" class="col-sm-6 col-lg-4">
+      <div class="card mb-4 elemento">
         <div class="card-img-top text-center">
           <img class="card-image" [src]="concepto.imagen" alt="title-card">
         </div>
