@@ -2,14 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+// AJAX
+
+import { HttpClientModule } from '@angular/common/http';
+
 // Routes
 
 import { APP_ROUTING } from './app.routes';
 
 // Pipes
-
-import { ToLower } from './pipes/lowerCase.pipe';
-import { ToUpper } from './pipes/upperCase.pipe';
 
 
 // Servicios
@@ -35,15 +36,15 @@ import { DictionaryComponent } from './components/dictionary/dictionary.componen
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    DictionaryComponent,
+    DictionaryComponent
+
     // Pipes
-    ToLower,
-    ToUpper
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     ElementsService

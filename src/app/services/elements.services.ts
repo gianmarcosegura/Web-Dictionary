@@ -10,44 +10,49 @@ export class ElementsService {
     private elementos: any[] =
     [
         {
-            titulo: 'HTML5 ',
+            titulo: 'HTML5',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/html.png'
         },
         {
-            titulo: 'CSS3 ',
-            descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            titulo: 'CSS3',
+            descripcion: 'Thiaaas is a wider card with supporting text below as a natural lead-in to additional content.',
+            imagen: '../../../assets/css.png'
         },
         {
-            titulo: 'Javascript ',
+            titulo: 'Javascript',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/javascript.svg'
         },
         {
-            titulo: 'Bootstrap ',
+            titulo: 'Bootstrap',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/bootstrap.svg'
         },
         {
-            titulo: 'jQuery ',
+            titulo: 'jQuery',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/jquery.png'
         },
         {
-            titulo: 'Angular ',
+            titulo: 'Angular',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/angular.ico'
         },
         {
-            titulo: 'React ',
+            titulo: 'React',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/react.png'
         },
         {
-            titulo: 'Vue ',
+            titulo: 'Vue',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-            imagen: '../../../assets/html.png'
+            imagen: '../../../assets/vue.png'
+        },
+        {
+            titulo: '.Net',
+            descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
+            imagen: '../../../assets/puntoNet.png'
         }
     ];
 

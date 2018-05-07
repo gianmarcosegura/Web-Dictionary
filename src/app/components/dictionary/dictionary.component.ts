@@ -26,6 +26,13 @@ export class DictionaryComponent implements OnInit {
 
     this.textoBuscar = (event.target as HTMLInputElement).value.toLowerCase();
 
+    if (!this.textoBuscar) {
+      this.textoBuscar = null;
+      document.getElementById('encontrado').style.display = 'none';
+    } else if (this.textoBuscar) {
+      document.getElementById('encontrado').style.display = 'block';
+    }
+
     !this.textoBuscar ? this.textoBuscar = null : console.log('');
 
     setTimeout(() => {
