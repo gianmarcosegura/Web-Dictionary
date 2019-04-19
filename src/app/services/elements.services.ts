@@ -1,12 +1,26 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ElementsService {
 
-    constructor() {
+    public url: string;
+
+    constructor( public http: HttpClient ) {
+        
+        this.url = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150';
         console.log('Servicio listo');
+    
     }
 
+
+    getPokemons(): Observable<any> {
+        return this.http.get(this.url);
+    }
+
+}
+    /*
     private elementos: any[] =
     [
         {
@@ -55,9 +69,6 @@ export class ElementsService {
             imagen: '../../../assets/puntoNet.png'
         }
     ];
+    */
 
-    getElementos() {
-        return this.elementos;
-    }
 
-}

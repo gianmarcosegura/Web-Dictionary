@@ -9,36 +9,64 @@ import { ElementsService } from '../../services/elements.services';
 
 export class DictionaryComponent implements OnInit {
 
-  diccionario: any[] = [];
-  textoBuscar: string;
+  pokemons: Pokemon;
+  prueba: any;
+  pokemonBuscar: string;
   ejemplo: number;
 
-  constructor( private _servicioDictionary: ElementsService ) {  }
+  constructor( public _http: ElementsService ) {  }
 
   ngOnInit() {
 
     this.ejemplo = 0;
-    this.diccionario = this._servicioDictionary.getElementos();
 
   }
 
+  pokemonGo() {
+    this._http.getPokemons()
+    .subscribe((data) => {
+      this.pokemons = data;
+    })
+  }
+
+  // FIXME: buscar url de cada pokemn
+
   imprime() {
 
-    this.textoBuscar = (event.target as HTMLInputElement).value.toLowerCase();
+    this.pokemonBuscar = (event.target as HTMLInputElement).value.toLowerCase();
 
-    if (!this.textoBuscar) {
-      this.textoBuscar = null;
+    for (let i in this.pokemons.results) {
+      if(this.pokemons.results[i].name.includes(this.pokemonBuscar)) {
+        console.log(this.pokemons.results[i].url)
+      }
+    }
+
+  }
+
+
+
+    /*
+
+    this.pokemonBuscar = (event.target as HTMLInputElement).value.toLowerCase();
+
+    if (!this.pokemonBuscar) {
+      this.pokemonBuscar = null;
       document.getElementById('encontrado').style.display = 'none';
-    } else if (this.textoBuscar) {
+    } else if (this.pokemonBuscar) {
       document.getElementById('encontrado').style.display = 'block';
     }
 
-    !this.textoBuscar ? this.textoBuscar = null : console.log('');
+    !this.pokemonBuscar ? this.pokemonBuscar = null : console.log('');
 
     setTimeout(() => {
       this.ejemplo = document.getElementById('content').childElementCount;
     }, 0);
-
+    */
   }
 
-}
+  interface Pokemon {
+    "count": string,
+    "next": string,
+    "previous": string,
+    "results": any
+  }

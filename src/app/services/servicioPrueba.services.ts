@@ -10,7 +10,7 @@ export class PruebaService {
     constructor(
         public http: HttpClient
     ) {
-        this.url = 'https://api.pokemontcg.io/v1/';
+        this.url = 'https://pokeapi.co/api/v2/';
     }
 
     getProductos(): Observable<any> {

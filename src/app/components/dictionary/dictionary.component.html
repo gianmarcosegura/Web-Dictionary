@@ -1,23 +1,27 @@
 <div class="row cabecera">
   <h2>Tecnologías</h2>
   <form class="form-inline my-2 my-lg-0">
-    <p id="encontrado" style="margin: 0; margin-top: 18px; margin-right: 1rem;"> Hemos encontrado {{ ejemplo }} resultados. </p>
-    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name='textoBuscar' (keyup)='imprime()' aria-label="Search" value>
+    <p id="encontrado" style="margin: 0; margin-right: 1rem;"> Hemos encontrado {{ ejemplo }} resultados. </p>
+    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name='pokemonBuscar' (keyup)='imprime()' (keydown)='pokemonGo()' aria-label="Search" value>
   </form>
 </div>
 <hr />
 <div id='content' class="row">
-  <ng-container *ngFor="let concepto of diccionario">
-    <div *ngIf="concepto.titulo.toLowerCase().includes(textoBuscar)" class="col-sm-6 col-lg-4">
+  <ng-container *ngFor="let pokemon of pokemons.results">
+
+
+    <div *ngIf="pokemon.name.toLowerCase().includes(pokemonBuscar)" class="col-sm-6 col-lg-4">
       <div class="card mb-4 elemento">
         <div class="card-img-top text-center">
-          <img class="card-image" [src]="concepto.imagen" alt="title-card">
+          <img class="card-image" [src]="" alt="title-card">
         </div>
         <div class="card-body">
-          <h5 class="card-title"> {{ concepto.titulo }} </h5>
-          <p class="card-text"> {{ concepto.descripcion }} </p>
+          <h5 class="card-title"> {{ pokemon.name | titlecase }} </h5>
+          <p class="card-text"> {{ pokemon.name }} </p>
         </div>
       </div>   
     </div>
+
+
   </ng-container>
 </div>
