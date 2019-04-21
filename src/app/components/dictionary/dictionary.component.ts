@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElementsService } from '../../services/elements.services';
+import { PokemonService } from '../../services/pokemon.services';
 
 @Component({
   selector: 'app-dictionary',
@@ -15,7 +15,7 @@ export class DictionaryComponent implements OnInit {
   ejemplo: number;
   image: string;
 
-  constructor( public _http: ElementsService ) {  }
+  constructor( public _http: PokemonService ) {  }
 
   ngOnInit() {
 
@@ -23,29 +23,38 @@ export class DictionaryComponent implements OnInit {
 
   }
 
-  pokemonGo() {
-    this._http.getPokemons()
-    .subscribe((data) => {
-      this.pokemons = data;
-    })
-  }
+  // pokemonGo() {
+  //   this._http.getPokemons()
+  //   .subscribe((data) => {
+  //     this.pokemons = data;
+  //   })
+  // }
 
   // FIXME: buscar url de cada pokemn
+  // FIXME: Igual ancho del hr con la cabecera del componente dictionary
 
-  imprime() {
+  goSearch(param: string) {
 
-    this.pokemonBuscar = (event.target as HTMLInputElement).value.toLowerCase();
+    this._http.getPokemonByName(param)
+      .subscribe(data => {
+        this.pokemons = data;
+      });
+ 
 
-    for (let i in this.pokemons.results) {
-      if(this.pokemons.results[i].name.includes(this.pokemonBuscar)) {
-        console.log(this.pokemons.results[i].url)
-        this._http.getImage(this.pokemons.results[i].url)
-          .subscribe((data)=>{
-            console.log(data);
-            this.image = data.sprites.front_default;
-          })
-      }
-    }
+    // console.log(param);
+
+    // this.pokemonBuscar = (event.target as HTMLInputElement).value.toLowerCase();
+
+    // for (let i in this.pokemons.results) {
+    //   if(this.pokemons.results[i].name.includes(this.pokemonBuscar)) {
+    //     console.log(this.pokemons.results[i].url)
+    //     this._http.getImage(this.pokemons.results[i].url)
+    //       .subscribe((data)=>{
+    //         console.log(data);
+    //         this.image = data.sprites.front_default;
+    //       })
+    //   }
+    // }
 
   }
 

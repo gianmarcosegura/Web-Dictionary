@@ -15,7 +15,7 @@ import { APP_ROUTING } from './app.routes';
 
 // Servicios
 
-import { ElementsService } from './services/elements.services';
+import { PokemonService } from './services/pokemon.services';
 
 
 // Componentes
@@ -47,7 +47,7 @@ import { DictionaryComponent } from './components/dictionary/dictionary.componen
     HttpClientModule
   ],
   providers: [
-    ElementsService
+    PokemonService
   ],
   bootstrap: [AppComponent]
 })

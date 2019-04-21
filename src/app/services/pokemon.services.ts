@@ -1,27 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class ElementsService {
+export class PokemonService {
 
-    public url: string;
+    public pokeApi: string;
 
     constructor( public http: HttpClient ) {
         
-        this.url = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150';
-        console.log('Servicio listo');
+        this.pokeApi = 'https://pokeapi.co/api/v2/';
     
     }
 
 
-    getPokemons(): Observable<any> {
-        return this.http.get(this.url);
+    getPokemonByName(name: string): Observable<any> {
+        return this.http.get(`${ this.pokeApi }pokemon/${ name }`);
     }
-
+    /*
     getImage(dir: string): Observable<any> {
         return this.http.get(dir);
-    }
+    }*/
 
 }
     /*
