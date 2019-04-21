@@ -19,6 +19,10 @@ export class ElementsService {
         return this.http.get(this.url);
     }
 
+    getImage(dir: string): Observable<any> {
+        return this.http.get(dir);
+    }
+
 }
     /*
     private elementos: any[] =

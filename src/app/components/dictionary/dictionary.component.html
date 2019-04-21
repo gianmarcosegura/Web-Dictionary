@@ -13,7 +13,7 @@
     <div *ngIf="pokemon.name.toLowerCase().includes(pokemonBuscar)" class="col-sm-6 col-lg-4">
       <div class="card mb-4 elemento">
         <div class="card-img-top text-center">
-          <img class="card-image" [src]="" alt="title-card">
+          <img class="card-image" [src]="image" alt="title-card">
         </div>
         <div class="card-body">
           <h5 class="card-title"> {{ pokemon.name | titlecase }} </h5>

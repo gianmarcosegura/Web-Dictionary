@@ -13,6 +13,7 @@ export class DictionaryComponent implements OnInit {
   prueba: any;
   pokemonBuscar: string;
   ejemplo: number;
+  image: string;
 
   constructor( public _http: ElementsService ) {  }
 
@@ -38,6 +39,11 @@ export class DictionaryComponent implements OnInit {
     for (let i in this.pokemons.results) {
       if(this.pokemons.results[i].name.includes(this.pokemonBuscar)) {
         console.log(this.pokemons.results[i].url)
+        this._http.getImage(this.pokemons.results[i].url)
+          .subscribe((data)=>{
+            console.log(data);
+            this.image = data.sprites.front_default;
+          })
       }
     }
 
