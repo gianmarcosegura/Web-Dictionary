@@ -1,0 +1,24 @@
+<form #form="ngForm" class="container-fluid">
+  <div class="col-md-12 text-center">
+    <p>Example of modularized component. In this form you can make a call to the backend</p>
+  </div>
+  <div class="row justify-content-center mt-5">
+    <div class="col-4">
+      <th2-mat-input
+        placeholder="Param for api call"
+        required
+        type="text"
+        name="param"
+        [(ngModel)]="param">
+      </th2-mat-input>
+    </div>
+    <div class="col-auto align-self-center">
+      <th2-mat-raised-button
+        [disabled]="!form.valid"
+        color="primary"
+        (clicked)="callAboutRest(param)">
+        Submit
+      </th2-mat-raised-button>
+    </div>
+  </div>
+</form>

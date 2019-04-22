@@ -1,0 +1,33 @@
+<div class="th2-app th2-light-theme">
+  <th2-mat-header
+		[appTitle]="headerConf.title"
+		[sticky]="headerConf.sticky"
+		[togglerPosition]="headerConf.togglerPosition"
+		[leftItems]="headerConf.leftItems"
+		[rightItems]="headerConf.rightItems">
+
+		<!-- Contenido de la seccion izquierda del header -->
+		<ng-container left *ngFor="let navItem of headerConf.leftItems">
+			<!-- No se renderiza este contenido mientras este determinado el parametro leftItems del componente header -->
+		</ng-container>
+
+		<!-- Contenido de la seccion derecha del header -->
+		<ng-container right *ngFor="let navItem of headerConf.rightItems">
+			<!-- No se renderiza este contenido mientras este determinado el parametro rightItems del componente header -->
+		</ng-container>
+
+	</th2-mat-header>
+	<div class="th2-content">
+		<router-outlet></router-outlet>
+	</div>
+	
+	<th2-mat-footer
+		[appTitle]="headerConf.title"
+		[fixed]="footerConf.fixed"
+		[rightItems]="footerConf.items">
+		<!-- No se renderiza este contenido mientras este determinado el parametro rightItems del componente footer -->
+	</th2-mat-footer>
+	
+	<th2-mat-toast></th2-mat-toast>
+	<th2-mat-loading></th2-mat-loading>
+</div>

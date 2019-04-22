@@ -1,0 +1,28 @@
+<section>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Color Hair</th>
+                <th scope="col">Height</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    <tr *ngFor="let participante of respuesta.results, let i = index"  >
+                    <th scope="row">{{i}}</th>
+                    <td>{{participante.name}}</td>
+                    <td *ngIf="participante.hair_color != 'n/a'">{{participante.hair_color}}</td>
+                    <td *ngIf="participante.hair_color == 'n/a'"></td>
+                    <td>{{participante.height}}</td>
+                    </tr>
+                
+        
+            </tbody>
+      </table>
+    </div>
+    <div>
+    </div>
+</section>
