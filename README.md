@@ -8,6 +8,8 @@ https://rxjs-dev.firebaseapp.com/
 
 https://academia-binaria.com/flujo-de-datos-entre-componentes-angular/
 
+https://www.udemy.com/rxjs-nivel-pro/
+
 @input
 @output
 Observables
