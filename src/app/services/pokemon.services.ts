@@ -99,6 +99,24 @@ export class PokemonService {
             de desarrollo web, algunos ya conocidos como HTML, CSS y javaScript; y una nueva generación de APIs de javaScript.
             La parte final app es porque las Progressive Web Apps se comportan como aplicaciones web nativas, pero usan
             tecnologías web.
+        },
+        {
+          
+            Un proveedor es una instrucción para el sistema de Inyección de dependencias sobre cómo obtener un valor para una dependencia.
+            La mayoría de las veces, estas dependencias son servicios que usted crea y proporciona.
+            
+            You can now inject UserService anywhere in your application.
+
+            The service itself is a class that the CLI generated and that's decorated with @Injectable(). By default, this decorator has a providedIn property, which creates a provider for the service. In this case, providedIn: 'root' specifies that Angular should provide the service in the root injector.
+
+            Provider scope
+            When you add a service provider to the root application injector, it’s available throughout the app. Additionally, these providers are also available to all the classes in the app as long they have the lookup token.
+
+            You should always provide your service in the root injector unless there is a case where you want the service to be available only if the consumer imports a particular @NgModule.
+        },
+        {
+            
+        
         }
     ];
     */
