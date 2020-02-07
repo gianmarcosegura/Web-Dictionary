@@ -70,6 +70,27 @@ export class PokemonService {
             titulo: '.Net',
             descripcion: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
             imagen: '../../../assets/puntoNet.png'
+        },
+        {
+            Tomcat es un servidor web desarrollado también por la Apache Software Foundation, por lo que su nombre oficial
+            es Apache Tomcat. También es un servidor HTTP, sin embargo, está hecho para aplicaciones Java en lugar de sitios
+            web estáticos. Tomcat puede ejecutar varias especificaciones diferentes de Java, como Java Servlet, JavaServe
+            Pages (JSP), Java EL y WebSocket.
+        },
+        {
+            Nginx, pronunciado como Engine-X, es una aplicación de servidor web más reciente lanzada por primera vez en el 2004.
+            Nginx fue creado para resolver el denominado problema c10k, lo que significa que un servidor web que utiliza subprocesos
+            para manejar las solicitudes de los usuarios no puede administrar más de 10,000 conexiones al mismo tiempo.
+
+            Dado que Apache utiliza la estructura basada en subprocesos, los propietarios de sitios web con mucho tráfico
+            pueden tener problemas de rendimiento. Nginx es uno de los servidores web que abordan el problema c10k y
+            probablemente el más exitoso.
+            Nginx tiene una arquitectura guiada por los eventos que no crea un nuevo proceso para cada solicitud. En
+            cambio, maneja todas las solicitudes entrantes en un solo proceso
+        },
+        {
+            Apache HTTP Server es un software de servidor web gratuito y de código abierto para plataformas Unix con el cual se
+            ejecutan el 46% de los sitios web de todo el mundo. Es mantenido y desarrollado por la Apache Software Foundation.
         }
     ];
     */
