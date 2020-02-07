@@ -91,6 +91,14 @@ export class PokemonService {
         {
             Apache HTTP Server es un software de servidor web gratuito y de código abierto para plataformas Unix con el cual se
             ejecutan el 46% de los sitios web de todo el mundo. Es mantenido y desarrollado por la Apache Software Foundation.
+        },
+        {
+            Progressive web apps (o aplicaciones web progresivas), es un término que se da a una nueva generación de aplicaciones
+            que incrementan su funcionalidad, conforme las capacidades del dispositivo en el que se ejecutan, incrementan, de ahí
+            la palabra progresiva. La siguiente parte del nombre web, hace referencia a que se construyen utilizando estándares
+            de desarrollo web, algunos ya conocidos como HTML, CSS y javaScript; y una nueva generación de APIs de javaScript.
+            La parte final app es porque las Progressive Web Apps se comportan como aplicaciones web nativas, pero usan
+            tecnologías web.
         }
     ];
     */
