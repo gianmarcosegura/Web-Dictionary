@@ -116,8 +116,13 @@ export class PokemonService {
         },
         {
             
+            Service Workers, se trata de uno o varios scripts que funcionan en un segundo plano y que nos permiten generar una 
+            experiencia offline, descargando los contenidos imprescindibles para que la aplicación funcione, así como generar 
+            notificaciones push.
         
-        }
+        },
+            Una arquitectura de shell de aplicación (o shell de app) es una forma de crear una Progressive Web App que se carga al instante y de manera confiable en la pantalla de tu usuario, en forma similar
+            a lo que ves en las apps nativas.
     ];
     */
 
