@@ -121,8 +121,19 @@ export class PokemonService {
             notificaciones push.
         
         },
+        {
             Una arquitectura de shell de aplicación (o shell de app) es una forma de crear una Progressive Web App que se carga al instante y de manera confiable en la pantalla de tu usuario, en forma similar
             a lo que ves en las apps nativas.
+        },
+        {
+            Search engine optimization (SEO) is the process of increasing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.[1]
+        },
+        {
+        
+        },
+        {
+        
+        }
     ];
     */
 
